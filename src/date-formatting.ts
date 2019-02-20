@@ -173,7 +173,7 @@ function renderParsedFormat(parsedFormat, date1, date2, separator, isRTL) {
   // that is not the same between dates.
   for (
     leftI = 0;
-    leftI < sameUnits.length && (!sameUnits[leftI] || unzonedDate1.isSame(unzonedDate2, sameUnits[leftI]));
+    leftI < sameUnits.length && (!sameUnits[leftI] || unzonedDate1.isSame(unzonedDate2, sameUnits[leftI])) && leftI < renderedParts1.length;
     leftI++
   ) {
     leftStr += renderedParts1[leftI]
