@@ -4948,7 +4948,7 @@ function renderParsedFormat(parsedFormat, date1, date2, separator, isRTL) {
     var middleStr = '';
     // Start at the leftmost side of the formatting string and continue until you hit a token
     // that is not the same between dates.
-    for (leftI = 0; leftI < sameUnits.length && (!sameUnits[leftI] || unzonedDate1.isSame(unzonedDate2, sameUnits[leftI])) && leftI < renderedParts1.length; leftI++) {
+    for (leftI = 0; leftI < renderedParts1.length && (!sameUnits[leftI] || unzonedDate1.isSame(unzonedDate2, sameUnits[leftI])); leftI++) {
         leftStr += renderedParts1[leftI];
     }
     // Similarly, start at the rightmost side of the formatting string and move left
